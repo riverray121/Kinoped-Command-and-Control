@@ -1,0 +1,218 @@
+#Namespace
+kp07_v11:
+
+#Joint State Controller--------------------------------------------------------------
+#Publishes state of joints from GAZEBO simulator into ROS
+  kp07_v11_joint_state_controller:
+    type: "joint_state_controller/JointStateController"
+    publish_rate: 50
+
+    controller_joint_names: ['', 'ar_joint', 'br1_joint', 'cr1_joint', 'er1_joint', 'fr1_joint', 'hr_joint', 'ir_joint', 'al_joint', 'bl1_joint', 'cl1_joint', 'el1_joint', 'fl1_joint', 'hl_joint', 'il_joint',]
+
+
+#Joint Position Controllers----------------------------------------------------------
+#Controllers for various joints
+  ar_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "ar_joint"
+    
+  br1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "br1_joint"
+    
+  cr1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "cr1_joint"
+    
+  er1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "er1_joint"
+    
+  fr1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "fr1_joint"
+    
+  hr_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "hr_joint"
+    
+  ir_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "ir_joint"
+    
+    
+    
+  al_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "al_joint"
+    
+  bl1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "bl1_joint"
+    
+  cl1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "cl1_joint"
+    
+  el1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "el1_joint"
+    
+  fl1_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "fl1_joint"
+    
+  hl_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "hl_joint"
+    
+  il_joint_position_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: "il_joint"  
+
+      
+#PID Gains for Joints----------------------------------------------------------------
+#
+  gazebo_ros_control:
+    pid_gains:
+      ar_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      br1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      cr1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      dr_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      er1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      fr1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      gr_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      hr_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      ir_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      er2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      fr2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      br2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      cr2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      al_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      bl1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      cl1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      dl_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      el1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      fl1_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      gl_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      hl_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      il_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+      el2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      fl2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      bl2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+      cl2_joint:
+        p: 100
+        i: 0.01
+        d: 10.0
+        i_clamp: 0.2
+        antiwindup: false
+        publish_state: true
+  

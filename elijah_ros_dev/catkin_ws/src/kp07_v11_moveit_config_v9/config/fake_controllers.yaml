@@ -1,0 +1,32 @@
+controller_list:
+  - name: fake_right_leg_controller
+    joints:
+      - ar_joint
+      - br1_joint
+      - cr1_joint
+      - er1_joint
+      - fr1_joint
+      - hr_joint
+  - name: fake_right_footplate_controller
+    joints:
+      - ir_joint
+  - name: fake_left_leg_controller
+    joints:
+      - al_joint
+      - bl1_joint
+      - cl1_joint
+      - el1_joint
+      - fl1_joint
+      - hl_joint
+  - name: fake_left_footplate_controller
+    joints:
+      - il_joint
+initial:  # Define initial robot poses.
+  - group: right_leg
+    pose: right_leg_home
+  - group: right_footplate
+    pose: right_footplate_home
+  - group: left_leg
+    pose: left_leg_home
+  - group: left_footplate
+    pose: left_footplate_home

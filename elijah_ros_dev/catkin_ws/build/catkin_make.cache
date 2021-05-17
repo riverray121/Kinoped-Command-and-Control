@@ -1,0 +1,2 @@
+kp07_v11:kp07_v11_manipulation:kp07_v11_moveit_config_v9:roboticsgroup_upatras_gazebo_plugins
+-DCATKIN_DEVEL_PREFIX=/home/elijah/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/elijah/catkin_ws/install -G Unix Makefiles
