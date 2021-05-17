@@ -52,15 +52,6 @@ o	Will ROS2 (designed for real-time control) be required for this project?
 
 
 
-
-
-
-
-
-
-
-
-
 Subproject One – PLC to PC Connection and Communications
 Project Goal: Create a network socket on the Kinoped onboard PLC capable of reading and writing data (received and published to and from the Movement Management System (ROS node)) to and from the PLC controller onboard the Kinoped robot. 
 
@@ -85,11 +76,6 @@ o	FINS
 o	OPC PLC base product 
 o	Kepware 
 •	How much of the HMI controller interface program written by Benoit Brisson can be used for the PLC socket?
-
-
-
-
-
 
 
 
@@ -127,25 +113,6 @@ o	Some level of ML for predicting movements?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 Subproject Three - ROS Controller Hub
 Project Goal: Create a central framework for communication with all elements of the Kinoped command and control system, functioning as a platform for all required nodes as well as motion planning and tracking.
 
@@ -170,18 +137,6 @@ o	If used for Kinematics solving:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
- 
 Subproject Four – Unity Environments
 Project Goal: Create Unity3D VR environments capable of representing the lower extremity movements of a user on the Kinoped as well as a VR environment with objects they can interact with during device use. 
 
@@ -277,42 +232,11 @@ o	If so should ROS-sharp be used and will it be fast enough?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Subproject Five – Online Database Integration
 
 Will be used to move collected data from the PostgreSQL database to cloud storage after the user ends their session in an environment. Will also be used to store user profiles and machine configuration for that user as well as an identifier linked to data from their previous sessions. 
 
 TBD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
