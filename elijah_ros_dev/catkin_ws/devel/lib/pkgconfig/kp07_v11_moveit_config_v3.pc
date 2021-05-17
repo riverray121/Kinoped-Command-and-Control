@@ -1,0 +1,8 @@
+prefix=/home/elijah/catkin_ws/devel
+
+Name: kp07_v11_moveit_config_v3
+Description: Description of kp07_v11_moveit_config_v3
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

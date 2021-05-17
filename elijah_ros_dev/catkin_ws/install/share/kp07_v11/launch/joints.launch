@@ -1,0 +1,48 @@
+<launch>
+
+  <arg
+    name="model"
+    default="$(find kp07_v11)/urdf/kp07_v11.urdf" />
+  <arg
+  	name="rvizconfig"
+  	default="$(find kp07_v11)/urdf.rviz" />
+  	
+  <include
+  	file="$(find kp07_v11)/launch/gazebo2.launch">
+  	  <arg
+  	  name="model"
+  	  value="$(arg model)" />
+  </include>
+  	
+  <node
+  	name="rviz"
+  	pkg="rviz"
+  	type="rviz"
+  	args="-d $(arg rvizconfig)" />
+  	
+  <rosparam
+  	command="load"
+  	file="$(find kp07_v11)/config/joint_controllers.yaml" />
+  	
+  <node
+  	name="kp07_v11_controller_spawner"
+  	pkg="controller_manager"
+  	type="spawner"
+  	ns="/kp07_v11"
+  	args="kp07_v11_joint_state_controller
+  	      ar_joint_position_controller
+  	      br1_joint_position_controller
+  	      cr1_joint_position_controller
+  	      er1_joint_position_controller
+  	      fr1_joint_position_controller
+  	      hr_joint_position_controller
+  	      ir_joint_position_controller
+  	      al_joint_position_controller
+  	      bl1_joint_position_controller
+  	      cl1_joint_position_controller
+  	      el1_joint_position_controller
+  	      fl1_joint_position_controller
+  	      hl_joint_position_controller
+  	      il_joint_position_controller"/>
+  
+</launch>

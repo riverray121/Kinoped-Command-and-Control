@@ -1,0 +1,8 @@
+prefix=/home/elijah/catkin_ws/devel
+
+Name: kp07_v11
+Description: Description of kp07_v11
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

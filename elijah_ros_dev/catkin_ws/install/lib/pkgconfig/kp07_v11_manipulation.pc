@@ -1,0 +1,8 @@
+prefix=/home/elijah/catkin_ws/install
+
+Name: kp07_v11_manipulation
+Description: Description of kp07_v11_manipulation
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lkp07_v11_manipulation
+Requires: geometric_shapes moveit_core moveit_ros_planning moveit_ros_planning_interface moveit_visual_tools pluginlib roscpp std_msgs tf2_eigen genmsg message_generation rospy

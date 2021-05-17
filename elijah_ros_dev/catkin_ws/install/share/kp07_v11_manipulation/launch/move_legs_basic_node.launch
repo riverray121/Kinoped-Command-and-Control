@@ -1,0 +1,45 @@
+<!--MOVE_LEGS_BASIC_NODE.LAUNCH
+  
+    Author: Elijah Retzlaff
+            elijah@innovationshealth.com
+            April 8, 2021
+          
+    Purpose: ??? 
+           
+    Last edited: 04/12/2021
+-->
+<launch> 
+ 
+  <!-- Load planning context to the param server for the control -->
+  <include
+    file="$(find kp07_v11_moveit_config_v9)/launch/planning_context.launch" >
+    <arg 
+      name="load_robot_description"
+      value="true" />
+  </include> 
+      
+  <!-- Launch node for controlling the movement of the Kinoped legs -->
+  <node
+    name="move_legs_basic_node"
+    pkg="kp07_v11_manipulation"
+    type="move_legs_basic_node"
+    respawn="false"
+    output="screen" >
+    <rosparam
+      command="load"
+      file="$(find kp07_v11_moveit_config_v9)/config/kinematics.yaml" />
+  </node>
+  
+  <!-- Launch node for publishing the path the Kinoped Legs are to take -->
+  <node
+    name="path_publisher"
+    pkg="kp07_v11_manipulation"
+    type="path_publisher"
+    respawn="false"
+    output="screen" >
+    <rosparam
+      command="load"
+      file="$(find kp07_v11_moveit_config_v9)/config/kinematics.yaml" />
+  </node>
+
+</launch>
